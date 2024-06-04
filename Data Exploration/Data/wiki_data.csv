@@ -1,0 +1,28 @@
+country,temperatures,COL_index,healthcare_index,pop_density,official_lang,minority_lang,widely_spoken_lang
+Malta,19.58,55.1,53.59,1700.0,"['Maltese', 'English']",[''],['']
+Cyprus,18.95,57.1,53.74,136.0,['Greek'],[''],['English']
+Portugal,15.85,46.6,54.95,111.0,['Portuguese'],[''],['English']
+Greece,14.26,54.2,52.5,78.0,['Greek'],[''],['']
+Spain,14.07,48.4,53.55,97.0,['Spanish'],"['Astur-Leonese ', ' Aragonese ', ' Fala ', ' French', ' Portuguese']",['']
+Italy,13.22,58.9,72.15,195.0,['Italian'],"['Ladin', ' Slovene']",['Other Italo-Dalmatian languages']
+Croatia,11.96,46.9,52.4,71.0,['Croatian'],[''],['English']
+France,11.65,66.0,55.31,117.0,['French'],"['Corsican language', ' Basque language', ' Breton language']",['Occitan language']
+Hungary,11.50,43.4,49.97,109.0,['Hungarian'],['Croatian'],['']
+Bulgaria,11.35,38.7,47.02,61.0,['Bulgarian'],[''],['']
+Belgium,10.67,63.0,53.99,383.0,"['Dutch', 'French', 'German']",[''],['English']
+Netherlands,10.49,64.3,54.63,424.0,['Dutch'],"['Dutch Low Saxon', ' Dutch Sign Language', ' Limburgish', ' Sinte Romani', ' Yiddish']",['English']
+Romania,10.18,38.8,48.84,83.0,['Romanian'],"['Armenian', ' German', ' Hungarian', ' Romani', ' Russian', ' Serbian', ' Slovak', ' Tatar', ' Turkish', ' Ukrainian']",['']
+Luxembourg,10.02,65.3,56.31,253.0,"['French', 'German', 'Luxembourgish']",[''],"['English', 'Portuguese']"
+Slovenia,9.86,49.3,53.13,105.0,['Slovene'],"['Hungarian ', ' Italian ', ' Croatian']",['']
+Ireland,9.73,66.5,55.19,72.0,"['Irish', 'English']",[''],['']
+Germany,9.59,62.7,55.98,233.0,['German'],"['Danish', ' Lower Sorbian', ' North Frisian', ' Romani']",['English']
+Denmark,8.90,75.2,55.46,138.0,['Danish'],['German'],['English']
+Slovakia,8.83,47.9,51.7,118.0,['Slovak'],"['Bulgarian', ' Czech', ' German', ' Hungarian', ' Polish', ' Romani', ' Rusyn', ' Serbian', ' Ukrainian']",['']
+Poland,8.78,41.9,49.25,120.0,['Polish'],"['German ', ' Lithuanian ', ' Belarusian ', ' Czech', ' Hebrew', ' Yiddish', ' Lemko', ' Karaim', ' Armenian', ' Romani', ' Russian', ' Slovak', ' Tatar', ' Ukrainian']",['English']
+Czech Republic,8.60,48.6,53,133.0,['Czech'],['Belarusian'],['']
+Austria,7.44,66.8,54.69,107.0,['German'],"['Slovene', ' Czech', ' Hungarian', ' Slovak', ' Romani', ' Serbian']",['English']
+Lithuania,7.38,48.4,49.87,42.0,['Lithuanian'],[''],"['Polish', 'Russian']"
+Latvia,6.87,51.4,50.39,28.0,['Latvian'],[''],['Russian']
+Estonia,6.34,53.0,51.41,29.0,['Estonian'],[''],['Russian']
+Sweden,3.23,62.2,56.29,24.0,['Swedish'],"['Finnish ', ' Meänkieli ', ' Sami ', ' Yiddish', ' Romani']",
+Finland,2.46,65.5,60.53,16.0,"['Finnish', 'Swedish']",['Sami'],['English']
