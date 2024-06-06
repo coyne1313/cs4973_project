@@ -35,7 +35,7 @@ def line_of_best_fit(X, y):
     return np.matmul(np.linalg.inv(np.matmul(X.T, X)), np.matmul(X.T, y))
 
 
-def train(df_crime):
+def train():
     """
 
     trains time series model based on crime per year per country
@@ -50,12 +50,12 @@ def train(df_crime):
 
     df_crime_scaled = pd.DataFrame()
 
-    df_crime_scaled["country"] = df_crime["country"]
-    df_crime_scaled["year"] = df_crime["year"]
-    df_crime_scaled["amount"] = (df_crime["amount"] - df_crime["amount"].mean()) / df_crime["amount"].std()
+    df_crime_scaled["country"] = df_crime_input["country"]
+    df_crime_scaled["year"] = df_crime_input["year"]
+    df_crime_scaled["amount"] = (df_crime_input["amount"] - df_crime_input["amount"].mean()) / df_crime_input["amount"].std()
 
 
-    df_crime_dummies = df_crime_scaled.join(pd.get_dummies(df_crime_scaled["country"]))
+    df_crime_dummies = df_crime_scaled.join(pd.get_dummies(df_crime_scaled["country"], drop_first=True, dtype='int'))
     
     crime_arr = np.array(df_crime_dummies.drop(columns=["country"]))
 
@@ -76,7 +76,7 @@ def train(df_crime):
     return regression
 
 
-def predict (country, year, regression, mean, std):
+def predict (country, year, regression):
     """
     following linear regression model, predicts the total amount of crimes per 100k people 
 
@@ -91,38 +91,37 @@ def predict (country, year, regression, mean, std):
        - answer (int) - predicted value for crimes per 100k people 
     
     """
+
+    countries = list(pd.get_dummies(df_crime_input["country"], drop_first=True, dtype='int').keys())
+    
     
 
-    encoding = [0] * len(eu_countries)
+    encoding = [0] * (len(countries))
 
-    encoding[eu_countries.index(country)] = 1
+    if country in countries:
+        encoding[countries.index(country)] = 1
+    
 
     encoding.insert(0, year)
     encoding.insert(0, 1)
 
-    print(encoding)
+    
+
+    
 
     unscaled_answer = np.matmul(encoding, regression)[0]
 
-    answer = unscaled_answer * std + mean
+    answer = unscaled_answer * df_crime_input["amount"].std() + df_crime_input["amount"].mean()
 
 
 
 
     
 
-    return answer
-print(train(df_crime_input))
+    return max(answer, 0)
 
-#print(predict("Sweden", 2025, train(crime_df)))
-#print(predict("Romania", 2025, train(df_crime_input), df_crime_input["amount"].mean(), df_crime_input["amount"].std()) )
-#print(crime_df["amount"])
+print(predict("Romania", 2029, train()))
 
-#print(crime_df["amount"].mean())
-#print(crime_df["amount"].std())
-
-#print(crime_df.describe())
-print(df_crime_input)
 
 
 
