@@ -17,7 +17,7 @@ def find_closest_country(merged_df, user_pref, top_n):
         top_n: Number of closest matches to be used
     Returns: top_n closest matches; defaults to 5
     '''
-    
+
     # Define the features to scale
     feats = merged_df.columns[1:-1]
     X = merged_df[feats]
@@ -39,7 +39,7 @@ def find_closest_country(merged_df, user_pref, top_n):
 
     # Calculate cosine similarity
     sim = cosine_similarity(user_scaled, X_scaled_df.drop(columns=['country']))
-    top_matches = sim[0].argsort()[-5:][::-1]
+    top_matches = sim[0].argsort()[-top_n:][::-1]
 
     # Find the matching country
     match_countries = X_scaled_df.iloc[top_matches]['country'].values
