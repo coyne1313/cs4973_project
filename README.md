@@ -1,1 +1,1 @@
-This Repository holds the exploratory data analysis/visualization for [this](https://github.com/bradylii/CONTEXT) project
+This Repository holds the exploratory data analysis/visualization for [Context](https://github.com/bradylii/CONTEXT), a travel application
